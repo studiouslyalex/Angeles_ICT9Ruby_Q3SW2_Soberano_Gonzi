@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style>
+		body {
+            font-family: cursive;
+            margin: 20px;
+            background-color: powderblue;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+            background-color: skyblue;
+        }
+        label, input, button {
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        input, button {
+            width: 80%;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+	</style>
+</head>
+<body>
+	<form>
+		<input type="number" id="numA">
+		<input type="number" id="numB">
+	</form>
+
+	<script>
+		function product(){
+			var numA = parseFloat(document.getElementById("numA").value);
+			var numB = parseFloat(document.getElementById("numB").value);
+			var prod = numA * numB;
+			window.alert("The product of A and B is: " + prod);
+		}
+
+		function power(){
+			var numA = parseFloat(document.getElementById("numA").value);
+			var numB = parseFloat(document.getElementById("numB").value);
+			var exp = Math.pow(numA, numB);
+			window.alert("A raised to B is: " + exp);
+		}
+
+		function remainder(){
+			var numA = parseFloat(document.getElementById("numA").value);
+			var numB = parseFloat(document.getElementById("numB").value);
+			var rem = numA % numB;
+			window.alert("A divided by B. The remainder is: " + rem);
+		}
+
+		function compare(){
+			var numA = parseFloat(document.getElementById("numA").value);
+			var numB = parseFloat(document.getElementById("numB").value);
+			var comp = numA === numB;
+			window.alert("Check if A is equal to B: " + comp);
+		}
+	</script>
+
+	<br><br><br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 d-grid">
+				<button onclick="product()">product of A and B</button>
+			</div>
+			<div class="col-md-6 d-grid">
+				<button onclick="power()">A raise to B</button>
+			</div>
+			<div class="col-md-6 d-grid">
+				<button onclick="remainder()">Get the remainder</button>
+			</div>
+			<div class="col-md-6 d-grid">
+				<button onclick="compare()">Compare if A = B</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
